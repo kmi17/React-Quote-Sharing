@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Quotesupper from './Quotesupper';
 import Quoteslower from './Quoteslower';
 import Header  from './Header';
+import NavBar from './Nav/Nav';
 
 class App extends React.Component {
 
@@ -25,7 +26,8 @@ class App extends React.Component {
       <div className="App">
       <Header/>
      <Quoteslower onClick={this.onClick.bind(this)}/>
-     <Quotesupper quotes={this.state.quotes}/>
+     <Quotesupper quotes={this.state.quotes} kmi={this.state.kmi}/>
+     
     </div>
     );
   }

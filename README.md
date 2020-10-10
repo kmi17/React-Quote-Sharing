@@ -75,3 +75,5 @@ npm install ws@3.3.2 --save-dev --save-exact
 ### React Bootstrap Installation
 
 Follow the tutorial: https://react-bootstrap.github.io/getting-started/introduction/
+
+npm install bootstarp

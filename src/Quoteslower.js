@@ -9,6 +9,7 @@ class Quoteslower extends React.Component{
   constructor(props){
     super(props);
     this.state={ quote : initialQuoteText};
+    this.state={ kmi : 'CAMY'};
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOnClick = this.handleOnClick.bind(this)
@@ -22,6 +23,7 @@ class Quoteslower extends React.Component{
   handleSubmit(event){
     this.props.onClick(this.state.quote);
     alert("Quote : " + this.state.quote);
+    alert("Quote : " + this.state.kmi);
     event.preventDefault();
   }
 
@@ -32,7 +34,7 @@ class Quoteslower extends React.Component{
   }
 
   handleClickAway(event){
-    if (this.state.quote === "" || this.state.quote.length === 0) {
+    if (this.state.quote === "") {
       setTimeout(function() { //Start the timer
         this.setState({ quote : initialQuoteText})
     }.bind(this), 900)
@@ -42,9 +44,10 @@ class Quoteslower extends React.Component{
 
   render(){
     return (
+      // {height: '100px'},
       <div>
       <Form style={{margin: '50px 50px 20px 20px'}}>
-      <Form.Control style={{height: '100px'},{margin: '50px 50px 20px 20px'}} value={this.state.quote} onClick={this.handleOnClick} onChange={this.handleChange} onMouseLeave={this.handleClickAway} />
+      <Form.Control style={{margin: '50px 50px 20px 20px'}} value={this.state.quote} onClick={this.handleOnClick} onChange={this.handleChange} onMouseLeave={this.handleClickAway} />
       <Button variant="primary" onClick={this.handleSubmit}>Share Quotes</Button>
       </Form>
       </div>
