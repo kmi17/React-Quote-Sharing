@@ -25,9 +25,8 @@ class App extends React.Component {
     return(
       <div className="App">
       <Header/>
-     <Quoteslower onClick={this.onClick.bind(this)}/>
      <Quotesupper quotes={this.state.quotes} kmi={this.state.kmi}/>
-     
+     <Quoteslower onClick={this.onClick.bind(this)}/>
     </div>
     );
   }
