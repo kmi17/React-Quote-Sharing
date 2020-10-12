@@ -70,7 +70,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Ubuntu Error Resolutions
 
-npm install ws@3.3.2 --save-dev --save-exact
+##npm install ws@3.3.2 --save-dev --save-exact
+
+npm install npm@latest -g
+npm cache clean — force
+rm -rf ~/.npm
+rm -rf node_modules
+rm -f package-lock.json
 
 ### React Bootstrap Installation
 
